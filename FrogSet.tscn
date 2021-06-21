@@ -1,0 +1,177 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Board.gd" type="Script" id=1]
+[ext_resource path="res://Tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Frogs/7.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Frogs/0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Frogs/6.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Frogs/3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Frogs/4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Frogs/1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Frogs/8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Frogs/5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Frogs/2.png" type="Texture" id=11]
+
+[node name="Board" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="5" index="0"]
+margin_left = 909.757
+margin_top = 88.7822
+margin_right = 1090.76
+margin_bottom = 269.782
+texture = ExtResource( 4 )
+edge_ver = [ false, true, true, false ]
+edge_type = [ 2, 1, 3, 0 ]
+
+[node name="Label" parent="5/Texture" index="0"]
+text = "5"
+
+[node name="6" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="6" index="0"]
+margin_left = 1100.68
+margin_top = 379.809
+margin_right = 1282.68
+margin_bottom = 560.809
+texture = ExtResource( 8 )
+edge_ver = [ false, false, true, false ]
+edge_type = [ 1, 0, 2, 3 ]
+
+[node name="Label" parent="6/Texture" index="0"]
+margin_left = 49.0
+margin_top = 20.4701
+margin_right = 57.0
+margin_bottom = 34.4701
+text = "6"
+
+[node name="8" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="8" index="0"]
+margin_left = 913.665
+margin_top = 678.834
+margin_right = 1178.67
+margin_bottom = 942.834
+texture = ExtResource( 11 )
+edge_ver = [ false, false, false, true ]
+edge_type = [ 3, 0, 1, 3 ]
+
+[node name="Label" parent="8/Texture" index="0"]
+text = "8"
+
+[node name="7" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="7" index="0"]
+margin_left = 302.368
+margin_top = 756.236
+margin_right = 567.368
+margin_bottom = 1021.24
+texture = ExtResource( 6 )
+edge_ver = [ true, true, false, true ]
+edge_type = [ 2, 3, 0, 1 ]
+
+[node name="Label" parent="7/Texture" index="0"]
+text = "7"
+
+[node name="2" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="2" index="0"]
+margin_left = 184.572
+margin_top = 82.9865
+margin_right = 366.572
+margin_bottom = 263.987
+texture = ExtResource( 7 )
+edge_ver = [ true, false, true, false ]
+edge_type = [ 2, 0, 3, 1 ]
+
+[node name="Label" parent="2/Texture" index="0"]
+text = "2"
+
+[node name="0" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="0" index="0"]
+margin_left = 1305.32
+margin_top = 162.367
+margin_right = 1487.32
+margin_bottom = 343.367
+texture = ExtResource( 10 )
+edge_ver = [ false, true, true, true ]
+edge_type = [ 2, 0, 2, 0 ]
+
+[node name="4" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="4" index="0"]
+margin_left = 580.129
+margin_top = 547.161
+margin_right = 762.129
+margin_bottom = 728.161
+texture = ExtResource( 5 )
+edge_ver = [ false, true, false, false ]
+edge_type = [ 3, 0, 1, 2 ]
+
+[node name="Label" parent="4/Texture" index="0"]
+text = "4"
+
+[node name="3" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="3" index="0"]
+margin_left = 58.1006
+margin_top = 430.109
+margin_right = 240.101
+margin_bottom = 611.109
+texture = ExtResource( 3 )
+edge_ver = [ false, true, false, true ]
+edge_type = [ 3, 1, 1, 2 ]
+
+[node name="Label" parent="3/Texture" index="0"]
+margin_left = 49.0
+margin_top = 20.0079
+margin_right = 57.0
+margin_bottom = 34.0079
+text = "3"
+
+[node name="1" parent="." instance=ExtResource( 2 )]
+
+[node name="Texture" parent="1" index="0"]
+margin_left = 533.039
+margin_top = 115.277
+margin_right = 715.039
+margin_bottom = 296.277
+texture = ExtResource( 9 )
+edge_ver = [ true, true, false, true ]
+edge_type = [ 0, 2, 1, 3 ]
+
+[node name="Label" parent="1/Texture" index="0"]
+margin_left = 49.0
+margin_top = 20.4757
+margin_right = 57.0
+margin_bottom = 34.4757
+text = "1"
+
+[node name="VictoryText" type="Label" parent="."]
+visible = false
+modulate = Color( 0.341176, 1, 0, 1 )
+margin_left = 158.967
+margin_top = 725.696
+margin_right = 224.967
+margin_bottom = 750.696
+rect_scale = Vector2( 10, 10 )
+text = "WINNER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="5"]
+[editable path="6"]
+[editable path="8"]
+[editable path="7"]
+[editable path="2"]
+[editable path="0"]
+[editable path="4"]
+[editable path="3"]
+[editable path="1"]

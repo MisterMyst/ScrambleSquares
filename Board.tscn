@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Board.gd" type="Script" id=1]
+[ext_resource path="res://Tile.tscn" type="PackedScene" id=2]
+
+[node name="Board" type="Control"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 100.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" parent="." instance=ExtResource( 2 )]
+
+[node name="1" parent="." instance=ExtResource( 2 )]
+
+[node name="2" parent="." instance=ExtResource( 2 )]
+
+[node name="3" parent="." instance=ExtResource( 2 )]
+
+[node name="4" parent="." instance=ExtResource( 2 )]
+
+[node name="5" parent="." instance=ExtResource( 2 )]
+
+[node name="6" parent="." instance=ExtResource( 2 )]
+
+[node name="7" parent="." instance=ExtResource( 2 )]
+
+[node name="8" parent="." instance=ExtResource( 2 )]
+
+[node name="VictoryText" type="Label" parent="."]
+visible = false
+modulate = Color( 0.341176, 1, 0, 1 )
+margin_left = 1200.0
+margin_top = 300.0
+margin_right = 1266.0
+margin_bottom = 325.0
+rect_scale = Vector2( 10, 10 )
+text = "WINNER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="0"]
+[editable path="1"]
+[editable path="2"]
+[editable path="3"]
+[editable path="4"]
+[editable path="5"]
+[editable path="6"]
+[editable path="7"]
+[editable path="8"]
